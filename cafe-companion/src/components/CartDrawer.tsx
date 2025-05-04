@@ -120,10 +120,10 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose }) => {
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: index * 0.1 }}
-                        className="order-item bg-secondary rounded-xl p-4 border-b-4 border-accent shadow-md"
+                        className="order-item bg-secondary rounded-xl p-4 border-b-4 border-accent shadow-md w-full"
                       >
-                        <div className="flex justify-between">
-                          <div className="flex-1">
+                        <div className="flex justify-between items-start w-full">
+                          <div className="flex-1 pr-4">
                             <motion.h3 
                               initial={{ x: -10 }}
                               animate={{ x: 0 }}

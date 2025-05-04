@@ -136,16 +136,20 @@ function App() {
             <motion.div 
               animate={{ 
                 scale: [1, 1.2, 1],
-                rotate: [0, 360],
+                rotate: [0, 10, 0, -10, 0],
               }}
               transition={{ 
                 repeat: Infinity, 
                 duration: 2,
                 ease: "easeInOut"
               }}
-              className="text-6xl"
+              className="w-32 h-32 flex items-center justify-center"
             >
-              ☕
+              <img 
+                src="/images/logo-coffee-2.png" 
+                alt="Art Coffee Loading" 
+                className="w-full h-full object-contain"
+              />
             </motion.div>
             <motion.div
               className="absolute"
@@ -160,7 +164,7 @@ function App() {
                 ease: "easeInOut" 
               }}
             >
-              <div className="w-20 h-20 rounded-full border-2 border-accent"></div>
+              <div className="w-40 h-40 rounded-full border-2 border-accent"></div>
             </motion.div>
           </motion.div>
         ) : (

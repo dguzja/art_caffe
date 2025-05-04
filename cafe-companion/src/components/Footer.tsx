@@ -117,9 +117,11 @@ const Footer = () => {
                 whileHover={{ scale: 1.05 }}
                 className="relative inline-block"
               >
-                <span className="text-4xl font-black font-heading text-transparent bg-clip-text bg-gradient-gold">
-                  ☕ Art Coffee
-                </span>
+                <img 
+                  src="/images/logo-coffee-2.png" 
+                  alt="Art Coffee Logo" 
+                  className="h-16 w-auto"
+                />
                 <motion.span 
                   className="absolute -top-2 -right-2 text-accent text-lg"
                   animate={{ 
@@ -176,37 +178,41 @@ const Footer = () => {
             </div>
           </motion.div>
 
+          {/* Empty space for alignment */}
+          <div className="lg:col-span-1 hidden lg:block"></div>
+
           {/* Links Sections */}
-          <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="lg:col-span-6 grid grid-cols-1 md:grid-cols-3 gap-8">
             {footerLinks.map((section, index) => (
               <motion.div 
                 key={section.title}
                 variants={itemVariants}
                 custom={index}
+                className="text-right"
               >
                 <h3 className="text-primary font-bold text-xl mb-6 font-heading relative inline-block">
                   {section.title}
                   <motion.span 
-                    className="absolute bottom-0 left-0 w-2/3 h-0.5 bg-gradient-primary rounded-full"
+                    className="absolute bottom-0 right-0 w-2/3 h-0.5 bg-gradient-primary rounded-full"
                     initial={{ width: 0 }}
                     whileInView={{ width: "66%" }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.3, duration: 0.5 }}
                   />
                 </h3>
-                <ul className="space-y-4">
+                <ul className="space-y-4 text-right">
                   {section.links.map((link) => (
                     <motion.li 
                       key={link.name}
-                      whileHover={{ x: 5 }}
+                      whileHover={{ x: -5 }}
                       transition={{ type: "spring", stiffness: 400 }}
                     >
                       <Link 
                         to={link.to} 
                         className="text-text/80 hover:text-accent transition-colors inline-flex items-center gap-2 group"
                       >
-                        <span className="text-accent/50 group-hover:text-accent transition-colors">{link.icon}</span>
                         <span className="group-hover:underline">{link.name}</span>
+                        <span className="text-accent/50 group-hover:text-accent transition-colors">{link.icon}</span>
                       </Link>
                     </motion.li>
                   ))}
@@ -251,7 +257,7 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
             >
-              Subscribe to receive special offers, free coffee samples, and updates on our newest creations
+              Subscribe to receive special offers and updates on our newest creations
             </motion.p>
             <motion.div 
               className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"

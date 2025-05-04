@@ -81,7 +81,7 @@ const HomePage = () => {
             className="text-5xl md:text-6xl font-extrabold mb-6 text-primary drop-shadow-xl tracking-tight"
             style={{textShadow: '0 4px 24px #b07d5633'}}
           >
-            Welcome to Art Coffee
+            Art Coffee
           </motion.h1>
           <div className="w-24 h-2 mx-auto mb-8 rounded-full" style={{background: 'linear-gradient(90deg, #d9a066 40%, #7b4b28 100%)'}}></div>
           <motion.p 
@@ -90,8 +90,8 @@ const HomePage = () => {
             transition={{ delay: 0.4 }}
             className="text-xl md:text-2xl mb-10 max-w-2xl mx-auto text-secondary"
           >
-            Enhancing your coffee experience through technology.<br />
-            <span className="text-accent">Customize</span> your orders, <span className="text-accent">earn rewards</span>, and enjoy seamless service.
+            Coffee your way!<br />
+            <span className="text-accent">Order</span> easily and <span className="text-accent">earn points</span> with every purchase.
           </motion.p>
           <motion.div 
             initial={{ y: 20, opacity: 0 }}
@@ -135,7 +135,7 @@ const HomePage = () => {
             transition={{ delay: 1 }}
             className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary"
           >
-            Our Digital Features
+            Our Services
           </motion.h2>
           <div className="w-16 h-1 mx-auto mb-12 rounded-full bg-accent"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -197,7 +197,7 @@ const HomePage = () => {
             transition={{ delay: 1.8 }}
             className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary"
           >
-            Featured Coffees
+            Our Coffees
           </motion.h2>
           <div className="w-16 h-1 mx-auto mb-12 rounded-full bg-accent"></div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">

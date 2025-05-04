@@ -63,12 +63,11 @@ const Navbar = () => {
                 whileTap={{ scale: 0.9 }}
                 className="relative"
               >
-                <motion.span 
-                  className="text-3xl font-black text-transparent bg-clip-text bg-gradient-gold relative inline-block"
-                  style={{ textShadow: '0 2px 10px rgba(255, 215, 0, 0.3)' }}
-                >
-                  ☕ <span className="font-heading">Art Coffee</span>
-                </motion.span>
+                <img 
+                  src="/images/logo-coffee-2.png" 
+                  alt="Art Coffee Logo" 
+                  className="h-12 w-auto"
+                />
                 <motion.div 
                   className="absolute -top-3 -right-3 text-gold text-lg"
                   animate={{ 

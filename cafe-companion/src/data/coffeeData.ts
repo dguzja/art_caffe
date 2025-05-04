@@ -17,16 +17,21 @@ export const coffeeOptions: CoffeeOption[] = [
     name: "Espresso",
     description: "A concentrated coffee brewed by forcing hot water under pressure through finely-ground coffee beans.",
     price: 2.5,
-    image: "/coffee/espresso.jpg",
+    image: "/images/esspresso.png",
     category: "Espresso",
-    customizable: false
+    customizable: true,
+    options: {
+      "Size": ["Single", "Double", "Triple"],
+      "Strength": ["Regular", "Strong", "Extra Strong"],
+      "Temperature": ["Hot", "Extra Hot"]
+    }
   },
   {
     id: "americano",
     name: "Americano",
     description: "Espresso diluted with hot water, similar in strength to coffee but with a different flavor.",
     price: 3.0,
-    image: "/coffee/americano.jpg",
+    image: "/images/americano.png",
     category: "Espresso",
     customizable: true,
     options: {
@@ -39,7 +44,7 @@ export const coffeeOptions: CoffeeOption[] = [
     name: "Cappuccino",
     description: "Equal parts espresso, steamed milk, and milk foam.",
     price: 3.5,
-    image: "/coffee/cappuccino.jpg",
+    image: "/images/cappucino.png",
     category: "Milk-based",
     customizable: true,
     options: {
@@ -53,7 +58,7 @@ export const coffeeOptions: CoffeeOption[] = [
     name: "Latte",
     description: "Espresso with steamed milk and a small layer of milk foam.",
     price: 4.0,
-    image: "/coffee/latte.jpg",
+    image: "/images/latte.png",
     category: "Milk-based",
     customizable: true,
     options: {
@@ -67,7 +72,7 @@ export const coffeeOptions: CoffeeOption[] = [
     name: "Mocha",
     description: "A chocolate-flavored variant of a latte.",
     price: 4.5,
-    image: "/coffee/mocha.jpg",
+    image: "/images/mocha.png",
     category: "Milk-based",
     customizable: true,
     options: {
@@ -82,7 +87,7 @@ export const coffeeOptions: CoffeeOption[] = [
     name: "Cold Brew",
     description: "Coffee brewed with cold water over a long period, resulting in a smooth, less acidic taste.",
     price: 4.0,
-    image: "/coffee/cold-brew.jpg",
+    image: "/images/coldbrew.png",
     category: "Cold",
     customizable: true,
     options: {
@@ -96,7 +101,7 @@ export const coffeeOptions: CoffeeOption[] = [
     name: "Iced Latte",
     description: "Espresso and milk served over ice.",
     price: 4.0,
-    image: "/coffee/iced-latte.jpg",
+    image: "/images/iced-latte.png",
     category: "Cold",
     customizable: true,
     options: {
@@ -111,7 +116,7 @@ export const coffeeOptions: CoffeeOption[] = [
     name: "Frappé",
     description: "A blended iced coffee drink with a frothy, creamy texture.",
     price: 5.0,
-    image: "/coffee/frappe.jpg",
+    image: "/images/frappe.png",
     category: "Cold",
     customizable: true,
     options: {
