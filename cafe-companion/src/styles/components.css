@@ -1,0 +1,278 @@
+/* Coffee Card */
+.coffee-card {
+  background-color: var(--background);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+.coffee-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: var(--shadow-lg);
+}
+.coffee-card__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: var(--secondary);
+}
+.coffee-card__content {
+  padding: var(--spacing-4);
+}
+.coffee-card__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-2);
+}
+.coffee-card__description {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-4);
+}
+.coffee-card__price {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary);
+}
+
+/* Category Filter */
+.category-filter {
+  display: flex;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-6);
+  flex-wrap: wrap;
+}
+.category-button {
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-full);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  border: none;
+}
+.category-button--active {
+  background-color: var(--primary);
+  color: var(--text-light);
+}
+.category-button--inactive {
+  background-color: var(--secondary);
+  color: var(--text-primary);
+}
+.category-button--inactive:hover {
+  background-color: var(--primary-light);
+  color: var(--text-light);
+}
+
+/* Order Summary */
+.order-summary {
+  background-color: var(--background);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow-md);
+}
+.order-summary__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-4);
+  color: var(--text-primary);
+}
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-3) 0;
+  border-bottom: 1px solid var(--secondary);
+}
+.order-item__name {
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+}
+.order-item__price {
+  color: var(--primary);
+  font-weight: var(--font-weight-semibold);
+}
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--spacing-4);
+  margin-top: var(--spacing-4);
+  border-top: 2px solid var(--primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+}
+
+/* Customization Modal */
+.customization-modal {
+  background-color: var(--background);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  max-width: 500px;
+  width: 100%;
+  box-shadow: var(--shadow-xl);
+}
+.customization-option {
+  margin-bottom: var(--spacing-4);
+}
+.customization-option__title {
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-2);
+  color: var(--text-primary);
+}
+.customization-choices {
+  display: flex;
+  gap: var(--spacing-3);
+  flex-wrap: wrap;
+}
+.customization-choice {
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-full);
+  background-color: var(--secondary);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.customization-choice:hover {
+  background-color: var(--primary-light);
+  color: var(--text-light);
+}
+.customization-choice--selected {
+  background-color: var(--primary);
+  color: var(--text-light);
+}
+
+/* QR Scanner */
+.qr-scanner {
+  background-color: var(--secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  text-align: center;
+}
+.qr-scanner__icon {
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--spacing-4);
+  color: var(--primary);
+}
+.qr-scanner__status {
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-4);
+}
+
+/* Progress Steps */
+.progress-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-8);
+  position: relative;
+}
+.progress-steps::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--secondary);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.progress-step {
+  position: relative;
+  z-index: 2;
+  background-color: var(--background);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--secondary);
+  transition: all var(--transition-normal);
+}
+.progress-step--active {
+  border-color: var(--primary);
+  background-color: var(--primary);
+  color: var(--text-light);
+}
+.progress-step--completed {
+  border-color: var(--primary);
+  background-color: var(--primary);
+  color: var(--text-light);
+}
+
+/* Loyalty Points */
+.loyalty-points {
+  background-color: var(--primary);
+  color: var(--text-light);
+  padding: var(--spacing-6);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+.loyalty-points__amount {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-2);
+}
+.loyalty-points__label {
+  font-size: var(--font-size-lg);
+  opacity: 0.9;
+}
+
+/* Reward Card */
+.reward-card {
+  background-color: var(--background);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+}
+.reward-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.reward-card__points {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary);
+  margin-bottom: var(--spacing-2);
+}
+.reward-card__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-2);
+  color: var(--text-primary);
+}
+.reward-card__description {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-4);
+}
+
+/* Gift Card */
+.gift-card {
+  background-color: var(--primary);
+  color: var(--text-light);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+}
+.gift-card__amount {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-2);
+}
+.gift-card__code {
+  font-family: monospace;
+  font-size: var(--font-size-xl);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: var(--spacing-3);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-4);
+}
+.gift-card__message {
+  font-style: italic;
+  opacity: 0.9;
+  margin-bottom: var(--spacing-4);
+} 
